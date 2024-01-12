@@ -1,5 +1,8 @@
 # LLM simple QnA example
 
+[![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 This repository contains the example of the simple `QnA` system based on the
 `LLM` and `LangChain`.
 
@@ -47,4 +50,10 @@ This repository contains the example of the simple `QnA` system based on the
 
 ### How to start?
 
-1. TODO
+1. Run `make download_dataset` command to download the `.pdf` files. Those files
+   will be placed in the `data` directory and it only a one part of the full
+   dataset that will be used.
+2. Run `make run_qdrant` command to start the `Qdrant` service. It will be
+   available on `http://localhost:6333` address.
+3. Run the notebook `notebooks/main.ipynb` to download the full dataset, index
+   it and run the `QnA` example.
