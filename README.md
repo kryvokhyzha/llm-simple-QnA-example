@@ -57,11 +57,11 @@ This repository contains the example of the simple `QnA` system based on the
 ### How to start?
 
 > [!IMPORTANT]\
-> Knowledge base for `RAG` consists of two parts: `.pdf` files and data from the
-> `wikipedia`. First part will be downloaded manually by the script and second part
-> will be downloaded from the code.
+> Knowledge base for `RAG` consists of two parts: `pdf files` and data from the `wikipedia`.
+> First part will be downloaded manually by the script and second part will be downloaded
+> from the code.
 
-1. Run `make download_dataset` command to download the `.pdf` files. Those files
+1. Run `make download_dataset` command to download the `pdf files`. Those files
    will be placed in the `data` directory and it only a one part of the full
    dataset that will be used.
 2. Run `make run_qdrant` command to start the `Qdrant` service. It will be
