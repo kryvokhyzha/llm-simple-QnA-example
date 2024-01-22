@@ -19,9 +19,8 @@ This repository contains the example of the simple `QnA` system based on the
 4. Activate virtual environment using `source venv/bin/activate` or
    `conda activate venv` command.
 5. Install poetry using instructions from
-   [here](https://python-poetry.org/docs/#installation).
-   > [!IMPORTANT]\
-   > Use `with the official installer` section.
+   [here](https://python-poetry.org/docs/#installation). Use
+   `with the official installer` section.
 6. Set the following option to disable new virtualenv creation:
    ```bash
    poetry config virtualenvs.create false
@@ -52,11 +51,15 @@ This repository contains the example of the simple `QnA` system based on the
 
 ## Examples
 
+> [!WARNING]\
+> You should have `wget` to files and `docker` to run `Qdrant` service.
+
 ### How to start?
 
-> [!WARNING]\
-> You should have `wget` to download first part of dataset and `docker` to run `Qdrant`
-> service.
+> [!IMPORTANT]\
+> Knowledge base for `RAG` consists of two parts: `.pdf` files and data from the
+> `wikipedia`. First part will be downloaded manually by the script and second part
+> will be downloaded from the code.
 
 1. Run `make download_dataset` command to download the `.pdf` files. Those files
    will be placed in the `data` directory and it only a one part of the full
