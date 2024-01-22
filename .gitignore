@@ -147,6 +147,7 @@ data
 trash/
 logs/
 weights/
+qdrant_storage/
 
 # temp
 TODO

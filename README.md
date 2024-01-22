@@ -8,6 +8,9 @@ This repository contains the example of the simple `QnA` system based on the
 
 ## Setup python environment
 
+> [!NOTE]\
+> This project is based on `Python 3.10` and uses `poetry` to manage dependencies.
+
 1. Clone the repository using `git clone` command.
 2. Open the terminal and go to the project directory using `cd` command.
 3. Create virtual environment using `python -m venv venv` or
@@ -16,8 +19,9 @@ This repository contains the example of the simple `QnA` system based on the
 4. Activate virtual environment using `source venv/bin/activate` or
    `conda activate venv` command.
 5. Install poetry using instructions from
-   [here](https://python-poetry.org/docs/#installation). Use
-   `with the official installer` section.
+   [here](https://python-poetry.org/docs/#installation).
+   > [!IMPORTANT]\
+   > Use `with the official installer` section.
 6. Set the following option to disable new virtualenv creation:
    ```bash
    poetry config virtualenvs.create false
@@ -49,6 +53,10 @@ This repository contains the example of the simple `QnA` system based on the
 ## Examples
 
 ### How to start?
+
+> [!WARNING]\
+> You should have `wget` to download first part of dataset and `docker` to run `Qdrant`
+> service.
 
 1. Run `make download_dataset` command to download the `.pdf` files. Those files
    will be placed in the `data` directory and it only a one part of the full

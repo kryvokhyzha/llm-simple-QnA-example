@@ -26,7 +26,6 @@ nvsmi0:
 	watch -n 0.1 nvidia-smi -i 0
 
 run_qdrant:
-	mkdir -p qdrant_storage && \
 	docker run --rm --name qdrant-docker -d -p 6333:6333 \
     -v /tmp/qdrant_storage:/qdrant/storage \
     qdrant/qdrant:latest
@@ -45,3 +44,6 @@ download_dataset:
 	wget https://cs229.stanford.edu/notes2020spring/cs229-notes-deep_learning.pdf && \
 	wget https://cs229.stanford.edu/notes2020spring/bias-variance-error-analysis.pdf && \
 	cd ..
+
+quantize_openchat_gguf:
+	chmod +x scripts/quantize_openchat_gguf.sh && scripts/quantize_openchat_gguf.sh
