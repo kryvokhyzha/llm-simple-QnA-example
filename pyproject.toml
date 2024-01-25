@@ -14,27 +14,38 @@ pandas = {version = "^2.0.0", optional = false}
 matplotlib = {version = ">=3.2, <=3.7.3", optional = false}
 seaborn = {version = "^0.13.0", optional = false}
 rootutils = {version = "^1.0.7", optional = false}
-langchain = {version = "0.0.354", optional = false}
+openai = {version = "0.28.1", optional = false}
+tiktoken = {version = "^0.5.2", optional = false}
+unstructured = {version = "^0.12.2", optional = false}
+openpyxl = {version = "^3.1.2", optional = false}
+wikipedia = {version = "^1.4.0", optional = false}
+#atlassian-python-api = {version = "^3.41.9", optional = false}
+langchain = {version = "0.1.3", optional = false}
 qdrant-client = {version = "^1.7.0", optional = false}
 pypdf = {version = "^3.17.4", optional = false}
 py-itree = {git = "https://github.com/juncongmoo/itree", tag = "v0.0.18", optional = false}
 #py-itree = {version = "0.0.18", optional = false}
 
+fastapi = {version = "^0.109.0", optional = false}
+uvicorn = {version = "^0.27.0", optional = false}
+loguru = {version = "^0.7.2", optional = false}
+#langcorn = {version = "^0.0.22", optional = false}
+
 #lark = {version = "^1.1.8", optional = false}
 #openai = {version = "^1.6.1", optional = false}
 
-bitsandbytes = {version = "^0.40.0", optional = false}
+#bitsandbytes = {version = "^0.40.0", optional = false}
 torch = {version = "^2.0.1", optional = false}
 transformers = {git = "https://github.com/huggingface/transformers", tag = "v4.36.2", optional = false}
 sentence-transformers = {version = "^2.2.2", optional = false}
-accelerate = {version = "^0.21.0", optional = false}
-gpt4all = {version = "^2.0.2", optional = false}
-wikipedia = {version = "^1.4.0", optional = false}
-peft = {git = "https://github.com/huggingface/peft.git", tag="v0.7.1", optional = false}
+#accelerate = {version = "^0.21.0", optional = false}
+#gpt4all = {version = "^2.0.2", optional = false}
+#peft = {git = "https://github.com/huggingface/peft.git", tag="v0.7.1", optional = false}
 #xformers = {version = "^0.0.20", optional = false}
 #einops = {version = "^0.6.1", optional = false}
 #ctransformers = {version = "^0.2.27", optional = false}
 
+# gguf models
 pyllama = {version = "^0.0.9", optional = false}
 pyllamacpp = {version = "^2.4.2", optional = false}
 llama-cpp-python = {version = "^0.2.26", optional = false}

@@ -4,7 +4,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 This repository contains the example of the simple `QnA` system based on the
-`LLM` and `LangChain`.
+`LLM` and `LangChain`. As the vector search engine I have used `Qdrant`.
 
 ## Setup python environment
 
@@ -66,5 +66,58 @@ This repository contains the example of the simple `QnA` system based on the
    dataset that will be used.
 2. Run `make run_qdrant` command to start the `Qdrant` service. It will be
    available on `http://localhost:6333` address.
-3. Run the notebook `notebooks/main.ipynb` to download the full dataset, index
-   it and run the `QnA` example.
+3. Run the notebook `notebooks/01-open-source-llms.ipynb` to download the full
+   dataset, index it and run the `QnA` example with local `LLMs`.
+4. Run the notebook `notebooks/02-open-ai.ipynb` to download the full dataset,
+   index it and run the `QnA` example with `OpenAI LLMs`.
+5. I can run `REST API` for `QnA` system using `make run_app` command. `Swagger`
+   will be available on `http://localhost:8000/docs` address.
+
+## Useful links
+
+- [Mastering RAG: How To Architect An Enterprise RAG System](https://www.rungalileo.io/blog/mastering-rag-how-to-architect-an-enterprise-rag-system) -
+  this article describes how to build the `RAG` system for enterprise and
+  `7 Failure Points` of `RAG` systems.
+- [Using langchain for Question Answering on Own Data](https://medium.com/@onkarmishra/using-langchain-for-question-answering-on-own-data-3af0a82789ed) -
+  good introduction into the `LangChain` and `QnA` systems. Contains a lot of
+  useful diagrams.
+- [RAG: How to Talk to Your Data](https://towardsdatascience.com/rag-how-to-talk-to-your-data-eaf5469b83b0) -
+  yet another good introduction into the `RAG` systems with useful examples.
+- [HOW-TO: Build a ChatPDF App over millions of documents with LangChain and MyScale in 30 Minutes](https://github.com/myscale/ChatData/blob/main/docs/self-query.md) -
+  just a quick example of how to build a `QnA` system using `LangChain`.
+- [How LangChain Implements Self Querying](https://zilliz.com/blog/How-LangChain-Implements-Self-Querying) -
+  into the details of how `LangChain` implements `self-querying`.
+- [SPLADE: sparse neural search](https://github.com/naver/splade) - `SPLADE` is
+  a sparse neural network for efficient vector search.
+- [Weaviate Hybrid Search](https://python.langchain.com/docs/integrations/retrievers/weaviate-hybrid) -
+  just a quick example hybrid search using `LangChain` and `Weaviate`.
+- [Qdrant Hybrid Search](https://docs.llamaindex.ai/en/stable/examples/vector_stores/qdrant_hybrid.html) -
+  just a quick example hybrid search using `LlamaIndex` and `Qdrant`.
+- [Building an Ecommerce-Based Search Application Using Langchain and Qdrant’s Latest Pure Vector-Based Hybrid Search](https://nayakpplaban.medium.com/building-an-ecommerce-based-search-application-using-langchain-and-qdrants-latest-pure-a60df053066a) -
+  yet another example of the `LangChain` and `Qdrant` hybrid search using
+  `SPLADE`.
+- [Azure OpenAI demos](https://github.com/retkowsky/Azure-OpenAI-demos/tree/main) -
+  Azure OpenAI demos repository.
+- [Webinar "A Whirlwind Tour of ML Model Serving Strategies (Including LLMs)"](https://www.youtube.com/watch?v=VUsm0qO2ifg&ab_channel=DataPhoenixEvents)
+- [Prompt-Engineering for Open-Source LLMs](https://www.youtube.com/watch?v=f32dc5M2Mn0&ab_channel=DeepLearningAI)
+- [Mitigating LLM Hallucinations with a Metrics-First Evaluation Framework](https://www.youtube.com/watch?v=u1pNrsR1txA&ab_channel=DeepLearningAI)
+- [Efficient Fine-Tuning for Llama-v2-7b on a Single GPU](https://www.youtube.com/watch?v=g68qlo9Izf0&ab_channel=DeepLearningAI)
+
+## Courses
+
+- [DeepLearning AI courses](https://learn.deeplearning.ai/) - that's a good
+  courses to start with
+- [Text book](https://aman.ai/primers/ai/) - articles on AI
+  fundamentals/concepts
+- [LLM Course](https://github.com/mlabonne/llm-course) - course with roadmaps
+  and Colab notebooks.
+- [Building LLM-Powered Apps](https://www.wandb.courses/courses/building-llm-powered-apps) -
+  W&B course about `LLMs`.
+- [Training and Fine-tuning Large Language Models (LLMs)](https://www.wandb.courses/courses/training-fine-tuning-LLMs) -
+  W&B course about `LLMs`.
+- [Large Language Models (LLMs): Foundation Models from the Ground Up](https://customer-academy.databricks.com/learn/course/internal/view/elearning/1804/large-language-models-llms-foundation-models-from-the-ground-up) -
+  Databricks course about `LLMs`.
+- [Large Language Models (LLMs): Application through Production](https://customer-academy.databricks.com/learn/course/internal/view/elearning/1749/large-language-models-llms-application-through-production) -
+  Databricks course about `LLMs`.
+- [Як створити спеціалізований чатбот. Детальний гайд на основі кейса клієнта](https://dou.ua/forums/topic/46902/?from=tg&utm_source=telegram&utm_medium=social) -
+  article about `chatbots` in `Ukrainian`.

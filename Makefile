@@ -47,3 +47,6 @@ download_dataset:
 
 quantize_openchat_gguf:
 	chmod +x scripts/quantize_openchat_gguf.sh && scripts/quantize_openchat_gguf.sh
+
+run_app:
+	uvicorn src.app:app --host 0.0.0.0 --port 8000
