@@ -52,7 +52,7 @@ This repository contains the example of the simple `QnA` system based on the
 ## Examples
 
 > [!WARNING]\
-> You should have `wget` to files and `docker` to run `Qdrant` service.
+> You should have `wget` to files and `docker` to run `Qdrant` and `Redis` services.
 
 ### How to start?
 
@@ -66,11 +66,15 @@ This repository contains the example of the simple `QnA` system based on the
    dataset that will be used.
 2. Run `make run_qdrant` command to start the `Qdrant` service. It will be
    available on `http://localhost:6333` address.
-3. Run the notebook `notebooks/01-open-source-llms.ipynb` to download the full
-   dataset, index it and run the `QnA` example with local `LLMs`.
-4. Run the notebook `notebooks/02-open-ai.ipynb` to download the full dataset,
-   index it and run the `QnA` example with `OpenAI LLMs`.
-5. I can run `REST API` for `QnA` system using `make run_app` command. `Swagger`
+3. Run `make run_redis` command to start the `Redis` service. It will be
+   necessary to cache the `LLM` prompts and requests in `step 5`.
+4. Run the notebook `notebooks/01-open-source-llms-langchain.ipynb` to download
+   the full dataset, index it and run the `QnA` example with local `LLMs`. This
+   notebook show only simple example of the `QnA` system.
+5. Run the notebook `notebooks/02-open-ai-langchain-base.ipynb` to download the
+   full dataset, index it and run the `QnA` example with `OpenAI LLMs`. This
+   example is more complex and show how to evaluate the `QnA` system.
+6. I can run `REST API` for `QnA` system using `make run_api` command. `Swagger`
    will be available on `http://localhost:8000/docs` address.
 
 ## Useful links
@@ -98,6 +102,47 @@ This repository contains the example of the simple `QnA` system based on the
   `SPLADE`.
 - [Azure OpenAI demos](https://github.com/retkowsky/Azure-OpenAI-demos/tree/main) -
   Azure OpenAI demos repository.
+- [A complete Guide to LlamaIndex in 2024](https://nanonets.com/blog/llamaindex/) -
+  `LlamaIndex` blog post.
+- [Building LLM-based Application Using Langchain and OpenAI](https://www.linkedin.com/pulse/building-llm-based-application-using-langchain-openai-rodion-salnik/) -
+  good text explanation of the `LangChain` and `OpenAI` integration.
+- [LOTR (Merger Retriever) in LangChain](https://python.langchain.com/docs/integrations/retrievers/merger_retriever) -
+  `Merger Retriever` is a `LangChain` retriever that merges results from
+  multiple retrievers.
+- [What is the difference between LOTR(Merger Retriever) and Ensemble Retriever](https://github.com/langchain-ai/langchain/issues/8677) -
+  `LOTR` vs `Ensemble Retriever` issue.
+- [TruLens](https://python.langchain.com/docs/integrations/providers/trulens) -
+  `TruLens` is an open-source package that provides instrumentation and
+  evaluation tools for `LLM` based applications.
+- [Better RAG with Merger Retriever (LOTR) and Re-ranking Retriever (Long Context Reorder)](https://www.youtube.com/watch?v=uYZftCq2efg&ab_channel=AIAnytime)
+- [Long-Context Reorder](https://python.langchain.com/docs/modules/data_connection/retrievers/long_context_reorder) -
+  `LongContextReorder` is a retriever that re-ranks the results of another
+  retriever.
+- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) -
+  `LLMs` and `long contexts` article.
+- [MultiVector Retriever](https://python.langchain.com/docs/modules/data_connection/retrievers/multi_vector) -
+  `MultiVectorRetriever` is a retriever that uses multiple vector stores to
+  retrieve results.
+- [Harnessing Retrieval Augmented Generation With Langchain](https://betterprogramming.pub/harnessing-retrieval-augmented-generation-with-langchain-2eae65926e82) -
+  `RAG` with `LangChain` article. Contains example with good and simple chat
+  application.
+- [LangChain Interface methods](https://python.langchain.com/docs/expression_language/interface) -
+  `LangChain` interface methods. How to stream the output, how to asynchronously
+  run the query, etc.
+- [Save time and money by caching OpenAI (and other LLM) API calls with Langchain](https://mikulskibartosz.name/cache-open-ai-calls-with-langchain) -
+  `LLM` caching in `LangChain`.
+- [LLM Caching integrations](https://python.langchain.com/docs/integrations/llms/llm_caching) -
+  `LLM` caching in `LangChain`.
+- [LLM Caching](https://python.langchain.com/docs/modules/model_io/llms/llm_caching) -
+  `LLM` caching in `LangChain`.
+- [Multi-Vector Retriever for RAG on tables, text, and images](https://blog.langchain.dev/semi-structured-multi-modal-rag/) -
+  `Multi-Vector Retriever` for `RAG` on tables, text, and images.
+- [LangChain Spark AI](https://github.com/sugarforever/LangChain-Tutorials/blob/main/LangChain_Spark_AI.ipynb) -
+  `LangChain` and `Spark` integration.
+- [Large Language Model for Table Processing: A Survey](https://arxiv.org/abs/2402.05121) -
+  `LLM` for table processing survey.
+- [Self-reflective RAG with LangGraph: Self-RAG and CRAG](https://www.youtube.com/watch?v=pbAd8O1Lvm4) -
+  `Self-RAG` and `CRAG` with `LangGraph`.
 - [Webinar "A Whirlwind Tour of ML Model Serving Strategies (Including LLMs)"](https://www.youtube.com/watch?v=VUsm0qO2ifg&ab_channel=DataPhoenixEvents)
 - [Prompt-Engineering for Open-Source LLMs](https://www.youtube.com/watch?v=f32dc5M2Mn0&ab_channel=DeepLearningAI)
 - [Mitigating LLM Hallucinations with a Metrics-First Evaluation Framework](https://www.youtube.com/watch?v=u1pNrsR1txA&ab_channel=DeepLearningAI)

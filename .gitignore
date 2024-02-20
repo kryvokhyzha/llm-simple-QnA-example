@@ -148,9 +148,10 @@ trash/
 logs/
 weights/
 qdrant_storage/
+.streamlit
 
 # temp
-TODO
+TODO.txt
 temp*.py
 
 # models
@@ -160,4 +161,7 @@ temp*.py
 docs/nvidia-triton/01-huggingface-transformer/assets/bert-base-uncased-tokenizer
 
 # notebooks
-notebooks/02-01-open-ai-ks-test.ipynb
+notebooks/*-ks.ipynb
+
+# chains
+src/chains/*_ks

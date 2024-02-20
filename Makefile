@@ -33,9 +33,17 @@ run_qdrant_rm:
 	docker stop qdrant-docker; \
 	rm -rf /tmp/qdrant_storage; \
 	make run_qdrant
+run_redis:
+	docker run --rm --name redis-docker -d -p 6379:6379 \
+	-v /tmp/redis_storage:/data \
+	redis/redis-stack-server:latest
+run_redis_rm:
+	docker stop redis-docker; \
+	rm -rf /tmp/redis_storage; \
+	make run_redis
 
 download_dataset:
-	mkdir -p data && \
+	mkdir -p data/my_documents && \
 	cd data && \
 	wget https://cs229.stanford.edu/notes2020spring/cs229-notes1.pdf && \
 	wget https://cs229.stanford.edu/section/cs229-linalg.pdf && \
@@ -43,10 +51,14 @@ download_dataset:
 	wget https://cs229.stanford.edu/notes2019fall/cs229-notes3.pdf && \
 	wget https://cs229.stanford.edu/notes2020spring/cs229-notes-deep_learning.pdf && \
 	wget https://cs229.stanford.edu/notes2020spring/bias-variance-error-analysis.pdf && \
+	wget https://sgp.fas.org/crs/misc/IF10244.pdf && \
 	cd ..
 
 quantize_openchat_gguf:
 	chmod +x scripts/quantize_openchat_gguf.sh && scripts/quantize_openchat_gguf.sh
 
+run_api:
+	uvicorn src.api:app --host 0.0.0.0 --port 8000
+
 run_app:
-	uvicorn src.app:app --host 0.0.0.0 --port 8000
+	streamlit run src/app.py
