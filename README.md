@@ -14,8 +14,7 @@ This repository contains the example of the simple `QnA` system based on the
 1. Clone the repository using `git clone` command.
 2. Open the terminal and go to the project directory using `cd` command.
 3. Create virtual environment using `python -m venv venv` or
-   `conda create -n venv python=3.10` command. We have used `Python 3.10` during
-   development.
+   `conda create -n venv python=3.10` command.
 4. Activate virtual environment using `source venv/bin/activate` or
    `conda activate venv` command.
 5. Install poetry using instructions from
@@ -141,6 +140,8 @@ This repository contains the example of the simple `QnA` system based on the
   `LangChain` and `Spark` integration.
 - [Large Language Model for Table Processing: A Survey](https://arxiv.org/abs/2402.05121) -
   `LLM` for table processing survey.
+- [Sparse Vectors in Qdrant: Pure Vector-based Hybrid Search](https://qdrant.tech/articles/sparse-vectors/) - how to add `sparse vectors` in `Qdrant`
+- [Hybrid Search: SPLADE (Sparse Encoder)](https://medium.com/@sowmiyajaganathan/hybrid-search-splade-sparse-encoder-neural-retrieval-models-d092e5f46913) - more about `SPLADE`
 - [Self-reflective RAG with LangGraph: Self-RAG and CRAG](https://www.youtube.com/watch?v=pbAd8O1Lvm4) -
   `Self-RAG` and `CRAG` with `LangGraph`.
 - [Webinar "A Whirlwind Tour of ML Model Serving Strategies (Including LLMs)"](https://www.youtube.com/watch?v=VUsm0qO2ifg&ab_channel=DataPhoenixEvents)
